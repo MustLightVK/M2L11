@@ -6,17 +6,18 @@ body{
     box-sizing: border-box;
 }
 .wrapper{
-    height: 100vh;
+    width: 1599px;
+    margin: 0 auto;
+    
     display: grid;
     grid-template-areas: "header header header"
                         "sidebar content content"
                         "footer footer footer";
-    grid-template-rows: 150px 1fr 150px;
+    grid-template-rows: 150px auto 150px;
     grid-template-columns: 1fr 1fr 1fr;
 }
 .header{
     grid-area: header;
-    max-height: 150px;
     display: grid;
     place-items: center center;
 
@@ -29,14 +30,13 @@ body{
     background: #3277EE;
 }
 .content{
-    min-width: 952px;
-    min-height: 400px;
     grid-area: content;
     display: grid;
     grid-template: repeat(2, 190px) / repeat(9, 88px);
     grid-gap: 20px;
     justify-content: end;
     align-content: center;
+    padding: 50px 0;
 
     background: #EEEAE7;
 }
@@ -44,7 +44,6 @@ body{
     
 .footer{
     grid-area: footer;
-    max-height: 150px;
     display: grid;
     place-items: center center;
 
